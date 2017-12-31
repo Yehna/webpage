@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<style type="text/css">
+<!--
+.style1 {color: #000000}
+-->
+</style>
+<body>
+<div align="center" class="style1">
+    <script type="text/javascript"><!--
+document.write("<span id=\"yudan_clock\"><\/span>");
+var now,hours,minutes,seconds,timeValue;
+function yudan_time(){
+now = new Date();
+hours = now.getHours();
+minutes = now.getMinutes();
+seconds = now.getSeconds();
+timeValue = (hours >= 12) ? "下午 " : "上午 ";
+timeValue += ((hours > 12) ? hours - 12 : hours) + " 時";
+timeValue += ((minutes < 10) ? " 0" : " ") + minutes + " 分";
+timeValue += ((seconds < 10) ? " 0" : " ") + seconds + " 秒";
+document.getElementById("yudan_clock").innerHTML = timeValue;
+setTimeout("yudan_time()",100);}
+yudan_time();
+// --></script></div>
+<p align="center">
+<a href="/子网页/免責.html" target="_blank" class="style1 style1">免责声明</a>
+</body>
+</html>
